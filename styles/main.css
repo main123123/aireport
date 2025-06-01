@@ -5,6 +5,10 @@
     --accent-color: #3498db;
     --text-color: #162F56;
     --background-color: #ffffff;
+    --orange-1: #ff3300;
+    --orange-2: #ff5500;
+    --orange-3: #ff8f27;
+    --orange-4: #ffa640;
     
     /* Typography */
     --heading-font: 'Helvetica Neue', Arial, sans-serif;
@@ -33,7 +37,9 @@ body {
 /* Page Layout */
 .page {
     width: 21cm;
+    height: 29.7cm;
     min-height: 29.7cm;
+    max-height: 29.7cm;
     padding: var(--page-margin);
     margin: 2rem auto;
     background: var(--background-color);
@@ -45,6 +51,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    overflow: hidden;
 }
 
 /* Add spacing between pages */
@@ -409,4 +416,139 @@ h3 {
     border-top: 2px solid #e0e3e8;
     margin: 3rem 0 2.5rem 0;
     width: 100%;
+}
+
+.apqc-hierarchy {
+    margin: 2.5rem 0 2.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.apqc-level {
+    border-radius: 8px;
+    padding: 1.1rem 1.5rem 1.1rem 1.5rem;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    position: relative;
+}
+
+.apqc-level1 { background: #2d4a6a; }
+.apqc-level2 { background: #3b6ca8; }
+.apqc-level3 { background: #6c6f73; }
+.apqc-level4 { background: #5a3b7a; }
+.apqc-level5 { background: #3b3f4a; }
+
+.apqc-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    opacity: 0.85;
+}
+
+.apqc-type {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+    letter-spacing: 0.03em;
+}
+
+.apqc-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.1rem;
+}
+
+.apqc-desc {
+    font-size: 0.97rem;
+    font-weight: 400;
+    color: #e0e3e8;
+    margin-bottom: 0.1rem;
+}
+
+.apqc-hierarchy-cascade {
+    margin: 2.5rem 0 2.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.apqc-hierarchy-cascade .apqc-level {
+    position: relative;
+    border-radius: 8px 0 0 8px;
+    padding: 0.7rem 1.2rem 0.7rem 3.2rem;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+    margin-left: 0;
+    min-width: 0;
+    height: 60px;
+    min-height: 60px;
+    max-height: 60px;
+    justify-content: flex-start;
+}
+.apqc-col-left {
+    flex: 0 0 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.1rem;
+}
+.apqc-col-right {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    padding-left: 1.2rem;
+}
+.apqc-hierarchy-cascade .apqc-level1 { background: var(--orange-1); margin-left: 0; }
+.apqc-hierarchy-cascade .apqc-level2 { background: var(--orange-2); margin-left: 2.2rem; }
+.apqc-hierarchy-cascade .apqc-level3 { background: var(--orange-3); margin-left: 4.4rem; }
+.apqc-hierarchy-cascade .apqc-level4 { background: var(--orange-4); margin-left: 6.6rem; }
+.apqc-hierarchy-cascade .apqc-level5 { background: #d35400; margin-left: 8.8rem; }
+
+.apqc-hierarchy-cascade .apqc-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    opacity: 0.85;
+    z-index: 2;
+}
+
+.apqc-hierarchy-cascade .apqc-name {
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 0.1rem;
+    letter-spacing: 0.03em;
+    z-index: 2;
+}
+
+.apqc-hierarchy-cascade .apqc-desc {
+    font-size: 0.78rem;
+    font-weight: 400;
+    color: #fff3e0;
+    margin-bottom: 0.1rem;
+    z-index: 2;
+}
+
+.analysis-dimensions {
+    margin: 2rem 0 2.5rem 0;
+    padding-left: 1.2rem;
+    list-style: disc inside;
+    color: #162F56;
+    font-size: 1.02rem;
+}
+.analysis-dimensions li {
+    margin-bottom: 1.1rem;
+    line-height: 1.5;
+}
+.analysis-dimensions strong {
+    color: var(--primary-color);
+    font-weight: 700;
 } 
